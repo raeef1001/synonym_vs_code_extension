@@ -1,0 +1,46 @@
+{
+  "name": "synonym-finder-raeef",
+  "displayName": "Synonym-antonym Finder(raeef)",
+  "description": "Find synonyms and antonyms in Visual Studio Code.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "icon.png",  
+  "publisher": "raeef", 
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "synonym-finder.find_synonym",
+        "title": "find synonym"
+      },
+      {
+        "command": "antonym-finder.find_antonym",
+        "title": "find antonym"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.82.0",
+    "@vscode/test-electron": "^2.3.4",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
